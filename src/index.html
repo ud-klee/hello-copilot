@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tetris</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel=stylesheet href="app.css">
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <svg id="canvasMain" width="240" height="480" xmlns="http://www.w3.org/2000/svg"></svg>
+    <svg id="canvasNext" width="72" height="72" xmlns="http://www.w3.org/2000/svg"></svg>
+  </div>
+  <div id="control-desktop">
+    Left/Right: Move |
+    Up: Rotate |
+    Down: Speed up |
+    Space: Drop |
+    Enter: Pause/Resume
+  </div>
+  <div id="control-mobile">
+    Drag left/right: Move |
+    Tap: Rotate |
+    Drag down: Speed up |
+    Tap bottom: Drop |
+    <button id="pause">Pause/Resume</button>
+  </div>
+  <div>
+    <button id="start">Start</button>
+    (Turn on speaker for best experience :)
+  </div>
+  <audio id="themeMusic" loop preload="auto" volume="0.5">
+    <source src="https://vgmsite.com/soundtracks/tetris-gb/kmkgckszkn/03.%20A-Type%20Music%20%28Korobeiniki%29.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="gameOverMusic" preload="auto" volume="0.5">
+    <source src="https://vgmsite.com/soundtracks/tetris-gb/xthcmvpwrn/18.%20Game%20Over.mp3" type="audio/mpeg">
+  </audio>
+</body>
+
+</html>

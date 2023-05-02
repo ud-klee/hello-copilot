@@ -1,0 +1,85 @@
+#container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+#canvasMain, #canvasNext {
+  background: #333;
+}
+#canvasMain.paused .layer, #canvasMain.paused .block {
+  opacity: 0.3;
+}
+.stroke-white-2 {
+  stroke: white;
+  stroke-width: 2;
+}
+.block {
+  transition: opacity 0.3s;
+}
+.block-0 {
+  --fill-color: red;
+}
+.block-1 {
+  --fill-color: blue;
+}
+.block-2 {
+  --fill-color: orange;
+}
+.block-3 {
+  --fill-color: magenta;
+}
+.block-4 {
+  --fill-color: green;
+}
+.block-5 {
+  --fill-color: darkcyan;
+}
+.block-6 {
+  --fill-color: brown;
+}
+.cell {
+  fill: var(--fill-color);
+  stroke: white;
+  stroke-width: 2;
+}
+.layer.cleared {
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0.1;
+  transform: translateX(320px);
+}
+.touch-spot {
+  fill: white;
+  stroke: white;
+  stroke-width: 2;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+.touch-spot.fading {
+  transition: opacity 1s, transform 1s;
+  opacity: 0;
+  transform: scale(2);
+}
+.touchable {
+  touch-action: none;
+}
+.pan {
+  fill: white;
+  stroke: white;
+  stroke-width: 2;
+  opacity: 0.5;
+}
+#control-desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  #container {
+    justify-content: left;
+  }
+  #control-mobile {
+    display: none;
+  }
+  #control-desktop {
+    display: block;
+  }
+}
